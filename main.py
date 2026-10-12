@@ -9,4 +9,5 @@ def show_tasks () :
         print(f"{index}. {task}")
 add_tasks("learn git")
 add_tasks("publish a priject on github")
+add_tasks("learn sql")
 show_tasks()
