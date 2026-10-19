@@ -1,0 +1,18 @@
+name:python checks
+on:
+	push:
+		branches:[main]
+	pull_request:
+		branches:[main]
+jobs:
+	check:
+		runs-on:ubuntu-lastest
+		steps:
+			- name:get repository code
+			  uses:actions/checkout@v4
+			- name:set up python
+			  uses:action/setup-python@v5
+			  with:
+			  	python-version: "3.12"
+			- name:check python syntax
+			  run:python -m compileall -q .
