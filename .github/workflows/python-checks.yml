@@ -5,7 +5,7 @@ on:
 	pull_request:
 		branches:[main]
 jobs:
-	check:
+	test:
 		runs-on:ubuntu-latest
 		steps:
 			- name:get repository code
@@ -14,5 +14,9 @@ jobs:
 			  uses:action/setup-python@v5
 			  with:
 			  	python-version: "3.12"
-			- name:check python syntax
-			  run:python -m compileall -q .
+			- name:install dependencies
+			  run:|
+			  	python -m pip install --upgrade pip
+				python -m pip install pytest
+			- name:run tests
+			  rus:python -m pytest -v

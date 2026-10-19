@@ -22,3 +22,5 @@ show_tasks()
 complete_task(2)
 print("\nafter complation")
 show_tasks()
+def add(a,b):
+	return a+b
