@@ -4,4 +4,4 @@ def test_add():
 def test_subtract():
 	assert subtract(10,4)==6
 def test_multiply():
-	assert test_multiply(3,4)==12
+	assert multiply(3,4)==12
